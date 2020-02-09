@@ -1,22 +1,19 @@
 <?php
 
-// ログイン
+// 新規登録
 
 require_once(__DIR__ . '/../config/config.php');
 
-// $app = new MyApp\Controller\Login();
+$app = new MyApp\Controller\Signup();
 
-// $app->run();
-
-// echo "login screen";
-// exit;
+$app->run();
 
 ?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <title>Log In</title>
+  <title>Sign Up</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -28,8 +25,8 @@ require_once(__DIR__ . '/../config/config.php');
       <p>
         <input type="password" name="password" placeholder="password">
       </p>
-      <div class="btn">Log In</div>
-      <p class="fs12"><a href="signup.php">Sign Up</a></p>
+      <div class="btn">Sign Up</div>
+      <p class="fs12"><a href="login.php">Log In</a></p>
   </div>
 </body>
 </htm>
