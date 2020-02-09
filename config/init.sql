@@ -9,7 +9,7 @@ create table users (
   email varchar(255) unique,
   password varchar(255),
   created datetime,
-  modified detetime
+  modified datetime
 );
 
 desc users;
