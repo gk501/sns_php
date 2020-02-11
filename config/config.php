@@ -2,11 +2,11 @@
 
 ini_set('display_errors', 1);
 
-define('DSN', 'mysql:dbhost=localhost;dbname=dotinstall_php_sns');
-define('DB_USER', 'dbuser');
-define('DB_PASS', 'dotinstall_sns_php_pass');
+define('DSN', 'mysql:dbhost=localhost;dbname=dotinstall_sns_php');
+define('DB_USERNAME', 'dbuser');
+define('DB_PASSWORD', 'dotinstall_sns_php_pass');
 
-define('SITE_URL', 'http://' . $_SERVER['HTTP_HOST']);
+define('SITE_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/sns_php/public_html');
 
 require_once(__DIR__ . '/../lib/functions.php');
 require_once(__DIR__ . '/autoload.php');

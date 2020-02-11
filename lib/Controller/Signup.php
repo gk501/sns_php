@@ -49,7 +49,7 @@ class Signup extends \MyApp\Controller {
         return;
       }
       // redirect to login
-      hearder('Location: ' . SITE_URL . '/login.php');
+      header('Location: ' . SITE_URL . '/login.php');
       exit;
     }
 
