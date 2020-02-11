@@ -32,6 +32,8 @@ class Signup extends \MyApp\Controller {
     // echo "success";
     // exit;
 
+    $this->setValues('email', $_POST['email']);
+
     if ($this->hasError()) {
       return;
     } else {
