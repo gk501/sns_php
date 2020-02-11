@@ -10,7 +10,7 @@ class Signup extends \MyApp\Controller {
       exit;
     }
 
-    if ($_SERVER['REQUEST_MTHOD'] === 'POST') {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       $this->postProcess();
     }
   }
@@ -20,10 +20,16 @@ class Signup extends \MyApp\Controller {
     try {
       $this->_validate();
     } catch (\MyApp\Exception\InvalidEmail $e) {
-
+      echo $e->getMessage();
+      exit;
     } catch (\MyApp\Exception\InvalidPassword $e) {
-      
+      echo $e->getMessage();
+      exit;
     }
+
+    echo "success";
+    exit;
+
     // create user
 
     // redirect to login
@@ -33,7 +39,7 @@ class Signup extends \MyApp\Controller {
     if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
       throw new \MyApp\Exception\InvalidEmail();
     }
-    if (!preg_match('/\A[a-zA-Z0-9]+\/', $_POST['passwor'])) {
+    if (!preg_match('/\A[a-zA-Z0-9]+\z/', $_POST['password'])) {
       throw new \MyApp\Exception\InvalidPassword();
     }
   }
