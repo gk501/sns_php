@@ -29,7 +29,7 @@ class Login extends \MyApp\Controller {
     } else {
       try {
         $userModel = new \MyApp\Model\User();
-        $userModel->login([
+        $user = $userModel->login([
           'email' => $_POST['email'],
           'password' => $_POST['password']
         ]);
@@ -39,6 +39,7 @@ class Login extends \MyApp\Controller {
       }
 
       // login処理
+      $_SESSION['me'] = $user;
 
       // redirect to login
       header('Location: ' . SITE_URL);
