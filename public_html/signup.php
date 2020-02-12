@@ -25,12 +25,12 @@ $app->run();
       <p class="err"><?= h($app->getErrors('email')); ?></p>
       <p>
         <input type="password" name="password" placeholder="password">
-      <p class="err"><?= h($app->getErrors('password')); ?></p>
       </p>
+      <p class="err"><?= h($app->getErrors('password')); ?></p>
       <div class="btn" onclick="document.getElementById('signup').submit();">Sign Up</div>
       <p class="fs12"><a href="login.php">Log In</a></p>
       <input type="hidden" name="token" value="<?= h($_SESSION['token']); ?>">
     </form>
   </div>
 </body>
-</htm>
+</html>

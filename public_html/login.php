@@ -23,7 +23,7 @@ $app->run();
   <div id="container">
     <form action="" method="post" id="login">
       <p>
-        <input type="text" name="email" placeholder="email" placeholder="email" value="<?= isset($app->getValues()->email) ? h($app->getValues()->email) : ''; ?>">
+        <input type="text" name="email" placeholder="email" value="<?= isset($app->getValues()->email) ? h($app->getValues()->email) : ''; ?>">
       </p>
       <p>
         <input type="password" name="password" placeholder="password">
@@ -35,4 +35,4 @@ $app->run();
     </form>
   </div>
 </body>
-</htm>
+</html>

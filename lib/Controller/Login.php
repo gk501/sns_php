@@ -39,9 +39,10 @@ class Login extends \MyApp\Controller {
       }
 
       // login処理
+      session_regenerate_id(true);
       $_SESSION['me'] = $user;
 
-      // redirect to login
+      // redirect to home
       header('Location: ' . SITE_URL);
       exit;
     }
@@ -54,8 +55,8 @@ class Login extends \MyApp\Controller {
       exit;
     }
 
-    if (!isset($_POST['email']) || !isset($_POST['passwoed'])) {
-      echo 'Invalid Form!';
+    if (!isset($_POST['email']) || !isset($_POST['password'])) {
+      echo "Invalid Form!";
       exit;
     }
 
